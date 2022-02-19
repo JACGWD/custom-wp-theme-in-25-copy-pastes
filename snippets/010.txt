@@ -1,0 +1,5 @@
+<?php // GET DYNAMIC HEADER CONTENT ?>
+
+  <?php wp_head(); ?>
+
+<?php // END GET DYNAMIC HEADER CONTENT ?>

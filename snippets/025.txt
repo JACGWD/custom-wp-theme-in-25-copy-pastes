@@ -1,0 +1,12 @@
+
+/* COLOR PALETTE */
+
+:root {
+    --main-bg-color: rgb(255, 255, 255);
+    --main-fg-color: rgb(1, 35, 70);
+    --titles-color: #1c0263;
+    --bodytext-color: #444444;
+    --accent-color: rgb(109, 230, 109);
+  }
+  
+/* END COLOR PALETTE */

@@ -1,0 +1,2 @@
+<?php get_footer(); ?>
+<?php // this functions loads the footer.php file ?>

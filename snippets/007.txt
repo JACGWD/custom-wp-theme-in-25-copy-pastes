@@ -1,0 +1,20 @@
+<?php
+// Add this to all your php files for added security
+
+if (!defined('ABSPATH'))
+	exit; 
+    // Exit if accessed directly. 
+    // Ex: Not being called up directly by index.php or some other theme PHP file
+?>
+
+
+<?php
+/*
+ * Proper way to enqueue scripts and styles.
+ */
+function billypoppins_theme_scripts() {
+    wp_enqueue_style( 'billypoppins', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'billypoppins_theme_scripts' );
+
+
