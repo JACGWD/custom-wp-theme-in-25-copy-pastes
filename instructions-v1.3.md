@@ -228,7 +228,9 @@ The web site should appear at the moment, with very basic HTML and no style what
 - At the bottom of the styles.css stylesheet, paste the code from snippets/025.txt to have a color palette built with CSS variables.
 - Customize the color palette as you wish.
 
-
+## Snippet 26: Add the sidebar array
+  - At the bottom of functions.php, add snippets/026.txt.
+  - Make sure the file ends with ?>
 
 
 
