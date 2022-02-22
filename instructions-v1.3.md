@@ -151,7 +151,7 @@ The web site should appear at the moment, with very basic HTML and no style what
 ### Snippet 13: Function #3
 #### Add more custom features to the site. 
 
-- Paste the snippets/012.txt code at the end of functions.php
+- Paste the snippets/013.txt code at the end of functions.php
 - Remove  \<title>\</title> from header.php, as it will now be automatically generated
 
 ## Customize header.php
