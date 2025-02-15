@@ -1,4 +1,0 @@
-  add_theme_support( 'custom-logo' );
-  // Enables Wordpress custom logo
-  // See: https://developer.wordpress.org/reference%2Ffunctions%2Fadd_theme_support%2F/#custom-logo
-  

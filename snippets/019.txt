@@ -1,4 +1,0 @@
-<div class="description">
-        <?php bloginfo('description'); ?>
-        <?php // This is the WP site tagline, not the meta description tag ?>
-</div>

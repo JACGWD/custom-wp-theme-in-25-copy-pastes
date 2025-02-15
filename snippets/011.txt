@@ -1,3 +1,0 @@
-<?php // GET DYNAMIC FOOTER CONTENT ?>
-    <?php wp_footer(); ?>
-<?php // END GET DYNAMIC FOOTER CONTENT ?>
