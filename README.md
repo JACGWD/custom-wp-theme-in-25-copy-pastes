@@ -378,7 +378,7 @@ Add this line at the top of the \<head> tag on header.php, replacing the current
     <?php wp_body_open(); ?>
 
 
-### Step 2.17: Add the H1, and header branding areas
+### Step 2.17: Add the header branding areas
 
 On header.php add the following code. This will create our header, with logo and company name at the top of the page:
     
