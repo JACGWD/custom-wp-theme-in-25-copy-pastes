@@ -384,7 +384,7 @@ On header.php add the following code. This will create our header, with logo and
     
     <header>
         <div class="branding">
-            <a href="<?php echo home_url(); ?>">
+            <a href="<?php echo esc_url(home_url()); ?>">
             <?php bloginfo('name'); ?>
             </a>
         </div>
