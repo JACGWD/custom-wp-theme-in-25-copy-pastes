@@ -571,7 +571,7 @@ Start your color palette adding some default CSS variables to style.css:
         }
 
         body {
-            background-color: var( --main-bg-color);
+            background-color: var(--main-bg-color);
         }
 
         h1.h2,h3,h4,h5,h6,legend,label {
