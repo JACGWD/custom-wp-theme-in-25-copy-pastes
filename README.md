@@ -1,5 +1,7 @@
 # How to Build a Simple WordPress Theme from Scratch
 
+## Official Wordpress reference page for theme structure
+
 See: https://yoast.com/wordpress-theme-anatomy/
 
 
@@ -7,14 +9,19 @@ See: https://yoast.com/wordpress-theme-anatomy/
 
 Before starting the actual theme building process, please set up your WordPress work environment:
 
-### 1.1 Required Plugins
+### 1.1 WordPress Studio
+
+Make sure to use **Wordpress Studio** as it is the simplest and fastest way to run Wordpress. 
+
+
+### 1.2 Required Plugins
 
 Please install and activate these plugins on your WordPress site:
 
 - [Show Current Template](https://wordpress.org/plugins/show-current-template/)
-- [Child Theme Check](https://wordpress.org/plugins/child-theme-check/)
+- [Theme Check](https://wordpress.org/plugins/theme-check/)
 
-### 1.2 Wordpress plugin from GitHub
+### 1.3 JACGWD CSS Reset Selector plugin from GitHub
 
 Download this custom plugin from GitHub as a zip file and upload it from your computer.
 
@@ -23,21 +30,21 @@ Download this custom plugin from GitHub as a zip file and upload it from your co
 - Select the downloaded zip file.
 - Activate the plugin.
 
-#### 1.2.1: Select a Reset option
+#### 1.3.1: Select a Reset option
 
 ![CSS Reset Option](./img/css-reset.png)
 
 Choose one of these options, and Save. View a page on the site, then go back and select andother option, save and come back to the page and refresh it again to see how the different resets affect the default layout of the page.
 
 
-### 1.3 Create a theme folder in wp-content
+### 1.4 Create a theme folder in wp-content
 - Navigate to /htdocs/wp-content/themes/ and create a new folder called "your-name". 
 - Ex: "billy-poppins". 
-- Make sure to give it a name without spaces or capitalized letters.
+- Make sure to give it a name **without spaces or capitalized letters**.
 
 
 
-### 1.4 Create empty files in the theme folder
+### 1.5 Create empty files in the theme folder
 
 - Create a header.php file
 - Create a footer.php file
@@ -52,21 +59,22 @@ Choose one of these options, and Save. View a page on the site, then go back and
         ├── footer.php
         ├── functions.php
         ├── header.php
-        ├── img
-        ├── fonts
+        ├── img/
+        ├── fonts/
         ├── index.php
         ├── style.css
         ├── search.php
         └── sidebar.php
         
 
-### 1.5 Create the theme preview artwork
+### 1.6 Create the theme preview artwork
 
 ![Billy Poppins theme screenshot](./img/screenshot.png)
 
 - In Photoshop, create a blank document 1200px wide x 900px high
 - Add any sort of background artwork you like for it
-- Add the name of your theme as a layer on top
+- Preferably simple backgrounds compress well.
+- **Add your name** as a layer on top
 - Save the file as a PNG file inside your theme folder.
 - The file must be called "screenshot.png".
 - After creating the file, run it through [ImageOptim](https://imageoptim.com/mac) to optimize it and reduce the file size.
@@ -244,6 +252,9 @@ This block of code does two very important basic things:
 
 
 ### Step 2.8: In functions.php: Control the name and number of menus
+
+This is where you can add the number of menus you want to have in your WordPress theme.
+
 
         /*  ADD THE MENUS */
 
