@@ -53,6 +53,7 @@ Choose one of these options, and Save. View a page on the site, then go back and
 - Create a index.php file
 - Create an img folder for your style images (not content images - those are uploaded via the Wordpress interface and saved automatically into the wp-content/uploads folder)
 - Create an fonts folder
+- Create a js folder (for javascripts)
 - Create a style.css file
 
 ### 1.6 Diagram of the files & folders structure
@@ -90,6 +91,7 @@ Choose one of these options, and Save. View a page on the site, then go back and
 - **Add your name** as a layer on top
 - Save the file as a PNG file inside your theme folder.
 - The file must be called "screenshot.png".
+- To minimize the file size, avoid photographs and use flat colors. (The theme checke4r will complain about heavy file sizes.)
 - After creating the file, run it through [ImageOptim](https://imageoptim.com/mac) to optimize it and reduce the file size.
   
 
@@ -114,17 +116,23 @@ Although it is just a comment, WordPress depends on this information to make the
         Description: Student learning theme
         Version: 1.0
         License: GNU General Public License v2 or later
-        License URI: http://www.gnu.org/licenses/gpl-2.0.html
-        Tags: WP 101 
+        License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+        Tested up to: 6.7.2
+        Requires PHP: 7
         Text Domain: billy-poppins
 
         This theme, like WordPress, is licensed under the GPL.
         Use it to make something cool, have fun, and share what you've learned with others.
         */
 
-#### Step 2.12: Add your color palette
+        /* END STEP 2.1 */
+
+### Step 2.2: Add your color palette to style.css
 
 Start your color palette adding some default CSS variables to style.css:
+
+
+    /* START STEP 2.2 */
 
     /* COLOR PALETTE */
         :root {
@@ -198,7 +206,9 @@ Start your color palette adding some default CSS variables to style.css:
 
         .alignleft {text-align: left;}
 
-        .aligncenter {text-align: center;}        
+        .aligncenter {text-align: center;}  
+
+        /* END STEP 2.2 */      
 
 #### Important
 
@@ -212,86 +222,10 @@ Go to Appearance > Themes and activate your theme
 
 </blockquote>
 
-### Step 2.2: Add the following code to header.php
 
-        <?php
-        // Add this to all your php files for added security
-        if (!defined('ABSPATH'))
-            exit; 
-            // Exit if accessed directly. 
-            // Ex: Not being called up directly by index.php or some other theme PHP file
-        ?><!DOCTYPE html>
-        <html>
+### Step 2.3: Add the following code to index.php
 
-        <head>
-            <meta charset="utf-8">
-
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <?php // the viewport metatag is what makes a design responsive ?>
-
-            <!-- START WP_HEAD CONTENT HERE  -->
-
-            <?php wp_head(); ?>
-            <?php // loads the WordPress head tag content ?>
-
-            <!-- END WP_HEAD CONTENT HERE  -->
-            
-            <title></title>
-        </head>
-
-        <body>
-
-        <header>
-            <nav>
-            </nav>
-        </header>
-        <!-- END OF STEP 2.2 -->
-
-<blockquote>
-
-1. Open any page on your web site.
-2. Also right-click the web page and select "View Page Source" to see the HTML. 
-3. Refresh the web page and the source code page after every change to see what happens.
-
-</blockquote>
-
-### Step 2.3: Add the following code to footer.php
-
-        <?php
-    // Add this to all your php files for added security
-
-    if (!defined('ABSPATH'))
-        exit; 
-        // Exit if accessed directly. 
-        // Ex: Not being called up directly by index.php or some other theme PHP file
-    ?>
-
-    <footer>
-        <!-- START WP_FOOTER CONTENT -->
-
-
-    <?php get_footer(); ?>
-    <?php // this functions loads the footer.php file ?>   
-    
-    
-        <!-- END WP_FOOTER CONTENT -->
-    </footer>
-
-
-    </body>
-    </html>
-
-<blockquote>
-
-1. Open any page on your web site.
-2. Also right-click the web page and select "View Page Source" to see the HTML. 
-3. Refresh the web page and the source code page after every change to see what happens.
-
-</blockquote>
-
-### Step 2.4: Add the following code to index.php
-
-        <?php
+        <?php  // START STEP 2.3
         // Add this to all your php files for added security
 
         if (!defined('ABSPATH'))
@@ -304,7 +238,7 @@ Go to Appearance > Themes and activate your theme
 
 
         <!--  END WORDPRESS GET_HEADER CONTENT IN INDEX.PHP -->
-        <!-- STEP 2.4 ENDS HERE -->
+        <!-- STEP 2.3 ENDS HERE -->
 
 <blockquote>
 
@@ -314,13 +248,65 @@ Go to Appearance > Themes and activate your theme
 
 </blockquote>
 
+### Step 2.4: Add the following code to header.php
+
+        <?php  // START STEP 2.4
+        // Add this to all your php files for added security
+        if (!defined('ABSPATH'))
+            exit; 
+            // Exit if accessed directly. 
+            // Ex: Not being called up directly by index.php or some other theme PHP file
+        ?>
+        
+        <!-- START STEP 2.4 ADD HEADER.PHP CODE -->
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <meta charset="utf-8">
+
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <?php // the viewport metatag is what makes a design responsive ?>
+            
+            <title></title>
+        </head>
+
+        <body>
+
+        <header>
+            <nav>
+            </nav>
+        </header>
+        <!-- END STEP 2.4 ADD HEADER.PHP CODE -->
+        <?php  // END OF STEP 2.4 ?>
+
+<blockquote>
+
+1. Open any page on your web site.
+2. Also right-click the web page and select "View Page Source" to see the HTML. 
+3. Refresh the web page and the source code page after every change to see what happens.
+
+</blockquote>
 
 ### Step 2.5: Add the following code to footer.php
 
-In the footer.php file, add  the following code **inside the \<footer> tag**:
+        <?php 
+        // START STEP 2.5 BUILD FOOTER
+        // Add this to all your php files for added security
 
-        <?php wp_footer(); ?>
-        <?php // this functions loads the footer.php file ?>    
+            if (!defined('ABSPATH'))
+              exit; 
+                 // Exit if accessed directly. 
+                 // Ex: Not being called up directly by index.php or some other theme PHP file
+             ?>
+
+          <footer>
+        
+          </footer>
+
+
+        </body>
+        </html><?php // END STEP 2.5 BUILD FOOTER ?>
 
 <blockquote>
 
@@ -331,17 +317,70 @@ In the footer.php file, add  the following code **inside the \<footer> tag**:
 </blockquote>
 
 
-### Step 2.6: Add the Wordpress loop to the index.php file, before the footer include
 
-- After the code you pasted in **Step 2.4**, add the following code.
+
+### Step 2.6: Add the following code to index.php 
+
+Make sure to add this code at the bottom of index.php!
+
+        <!-- START STEP 2.6 ENABLE FOOTER -->
+
+
+            <?php get_footer(); ?>
+            <?php // this functions loads the footer.php file ?>   
+    
+    
+        <!-- END STEP 2.6 ENABLE FOOTER -->
+
+<blockquote>
+
+1. Open any page on your web site.
+2. Also right-click the web page and select "View Page Source" to see the HTML. 
+3. Refresh the web page and the source code page after every change to see what happens.
+
+</blockquote>
+
+
+### Step 2.7: Add the following code inside footer.php 
+
+Make sure to add this code **after** the \<footer> tag **but before** \<body>!
+
+        <!-- START STEP 2.7 WP_FOOTER CONTENT -->
+
+
+            <?php wp_footer(); ?>
+            <?php // this functions loads the footer content ?>   
+    
+    
+        <!-- END STEP 2.6 WP_FOOTER CONTENT -->
+<blockquote>
+
+1. Open any page on your web site.
+2. Also right-click the web page and select "View Page Source" to see the HTML. 
+3. Refresh the web page and the source code page after every change to see what happens.
+
+</blockquote>
+
+
+
+### Step 2.8: Add the H1 and Wordpress loop to the index.php file, before the footer include
+
+- After the code you pasted in **Step 2.3**, add the following code.
+- Add the code **before** the Step 2.6 footer code.
 - Make sure to **edit the text domain to match** the one you wrote in the CSS file.
 
 
-        <h1><?php the_title(); ?></h1>
+        <!-- START STEP 2.8 ADD H1 AND WORDPRESS LOOP -->
+        <h1><?php the_title(); // AUTOMATICALLY ADDS THE PAGE TITLE ?></h1>
         
         <!-- opening flex-container will go here -->
         
         <main id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <?php // NOTE IDs AND CLASSES ARE AUTOMATICALLY ADDED HERE ?>
+
+
+        <!-- START WORDPRESS LOOP -->
+
             <?php 
                 if ( have_posts() ) : 
                 while ( have_posts() ) : the_post();
@@ -349,11 +388,18 @@ In the footer.php file, add  the following code **inside the \<footer> tag**:
                 endwhile;
             else :
                 _e( 'Sorry, no posts matched your criteria.', 'billy-poppins' );
+                // MAKE SURE TO CHANGE BILLY-POPPINS HERE
             endif;
             ?>
+
+            <?php wp_link_pages( $args ); ?>
+
+        <!-- END WORDPRESS LOOP -->    
         </main>
 
+         <!-- END STEP 2.8 ADD H1 AND WORDPRESS LOOP -->
         <!-- closing flex-container will go here -->
+
 
 <blockquote>
 
@@ -372,7 +418,7 @@ In the footer.php file, add  the following code **inside the \<footer> tag**:
     
 
 
-### Step 2.7: Add the following code to functions.php
+### Step 2.9: Add the following code to functions.php
 
 This block of code does two very important basic things:
 
@@ -402,6 +448,8 @@ This block of code does two very important basic things:
         }
         add_action( 'wp_enqueue_scripts', 'billypoppins_theme_scripts' );
 
+        // END STEP 2.9
+
 <blockquote>
 
 1. Open any page on your web site.
@@ -410,12 +458,12 @@ This block of code does two very important basic things:
 
 </blockquote>
 
-### Step 2.8: In functions.php: Control the name and number of menus
+### Step 2.10: In functions.php: Control the name and number of menus
 
 This is where you can add the number of menus you want to have in your WordPress theme.
 
 
-        /*  ADD THE MENUS */
+        /*  STEP 2.10 ADD THE MENUS */
 
         function add_my_menus() {
             register_nav_menus(
@@ -423,31 +471,40 @@ This is where you can add the number of menus you want to have in your WordPress
                 'header-menu' => __( 'Header Menu' ),
                 'footer-menu' => __( 'Footer Menu' ),
                 'social-menu' => __( 'Social Menu' ),
+                // YOU CAN ADD AS MANY MENUS AS YOU WANT HERE
             )
             );
         }
         add_action( 'init', 'add_my_menus' );
 
+        // END STEP 2.10 ADD THE MENUS
+
+
+
 <blockquote>
 
-1. Open any page on your web site.
-2. Also right-click the web page and select "View Page Source" to see the HTML. 
-3. Refresh the web page and the source code page after every change to see what happens.
+#### Go see the menus
+
+Go to Appearance > Menus, click "Manage Locations", then "Select a Menu". Your new menus are there.
 
 </blockquote>
 
-### Step 2.9: In header.php, add the following to customize the nav code
+### Step 2.11: In header.php, add the following to add the menu to the page (and customize the nav code)
 
-Add the following code inside the \<nav> tag of header.php. Feel free to experiment with the values to see what happens when you change them.
+Add the following code **inside the \<nav> tag** of header.php. Feel free to experiment with the values to see what happens when you change them.
 
-        <?php
+        <!-- START STEP 2.11 ADD THE MENU TO THE PAGE -->
+        <?php 
             wp_nav_menu(array(
-                'menu_class'	  	=> 'primary-menu',
-                'theme_location' 	=> 'header-menu',
-                'menu_id'	    	=> 'menu',
-                'container'         => 'div',
+                'menu_class'	  	=> 'primary-menu',  // adds: class="primary-menu"
+                'theme_location' 	=> 'header-menu',   // is controlled as the "header menu" in the backend
+                'menu_id'	    	=> 'menu',          // adds: id="menu"
+                'container'         => 'div',           // menu is inside a div
             ));
         ?>
+        <!-- END STEP 2.11 ADD THE MENU TO THE PAGE -->
+
+
 
 <blockquote>
 
@@ -457,13 +514,16 @@ Add the following code inside the \<nav> tag of header.php. Feel free to experim
 
 </blockquote>
 
-### Step 2.10: In header.php, call up the contents of \<head>
+### Step 2.12: In header.php, call up the Wordpress contents of \<head>
 
 Paste the following code inside the \<head> tag, above the \<title> tag:
 
-        <?php // GET DYNAMIC HEADER CONTENT ?>
+        <!-- START 2.12 WP_HEAD GET DYNAMIC HEADER CONTENT -->
+
         <?php wp_head(); ?>
-        <?php // END GET DYNAMIC HEADER CONTENT ?>
+
+        <!-- END 2.12 WP_HEAD GET DYNAMIC HEADER CONTENT -->
+
 
 <blockquote>
 
@@ -474,27 +534,24 @@ Paste the following code inside the \<head> tag, above the \<title> tag:
 </blockquote>
 
 
-### Step 2.11: In footer.php, call up the contents of \<footer>
+### Step 2.13: Add the search form to header.php
 
-        <?php // GET DYNAMIC FOOTER CONTENT ?>
-            <?php wp_footer(); ?>
-        <?php // END GET DYNAMIC FOOTER CONTENT ?>
+**Inside the \<body> tag**, near the top, add this code to call up the search form. Note that you can:
 
-<blockquote>
+- Add it above \<header>
+- Add it inside \<header>
+  - Before \<nav>
+  - After \<nav>
+- Add it below \<header>
 
-1. Open any page on your web site.
-2. Also right-click the web page and select "View Page Source" to see the HTML. 
-3. Refresh the web page and the source code page after every change to see what happens.
+This will change the order of the HTML.
 
-</blockquote>
-
-### Step 2.12: Add the search form to header.php
-
-**Inside the \<nav> tag**, add this code to call up the search form. Note that you can add it before or after the code from step 2.9. This will change the order of the HTML. So you might have to use flex-direction row or row-reverse depending on which one you place first in the PHP.
-
+        <!-- START STEP 2.13 ADD SEARCH FORM -->
 
         <?php get_search_form(); ?>
 
+        <!-- END STEP 2.13 ADD SEARCH FORM -->       
+
 <blockquote>
 
 1. Open any page on your web site.
@@ -503,11 +560,11 @@ Paste the following code inside the \<head> tag, above the \<title> tag:
 
 </blockquote>
 
-### Step 2.13: Add new features to the theme
+### Step 2.14: Add new features to the theme
 
 Copy this block of code, and add it to **functions.php**:
 
-        // ADD ADDITIONAL CUSTOM FEATURES TO THE SITE THEME
+        // START STEP 2.14 ADD ADDITIONAL CUSTOM FEATURES TO THE SITE THEME
         // https://developer.wordpress.org/reference%2Ffunctions%2Fadd_theme_support%2F/
 
         function billypoppins_theme_init(){
@@ -519,6 +576,9 @@ Copy this block of code, and add it to **functions.php**:
             
             add_theme_support('title-tag');
             // Adds a custom <title> tag in the <head>
+
+            add_theme_support('custom-logo');
+            // Adds a custom logo selector in Appearance > Customize > Site Identity
             
             add_theme_support('html5',
             array(
@@ -538,6 +598,20 @@ Copy this block of code, and add it to **functions.php**:
             // ADDS THESE FEATURES TO WP
             add_action('after_setup_theme', 'billypoppins_theme_init');
 
+            // END STEP 2.14 ADD ADDITIONAL CUSTOM FEATURES TO THE SITE THEME
+
+<blockquote>
+
+The only thing you will notice in the updated HTML is a second \<title> tag, with an actual title inside it, well above the manually added title tag.
+
+</blockquote>
+
+
+#### Step 2.14.2: Delete the old \<title>
+
+The code above (step 2.14) automatically includes a title tag (line 574) that displays the appropriate page title. Remove the \<title>\</title> tag you added to header.php, just before \</head>. 
+
+
 <blockquote>
 
 1. Open any page on your web site.
@@ -547,23 +621,10 @@ Copy this block of code, and add it to **functions.php**:
 </blockquote>
 
 
-#### Step 2.13.1: Delete the old \<title>
-
-The code above (step 2.13) automatically includes a title tag. Remove the \<title> tag you added to header.php in Step 2.2. 
 
 ## Customize header.php
 
-<blockquote>
-
-1. Open any page on your web site.
-2. Also right-click the web page and select "View Page Source" to see the HTML. 
-3. Refresh the web page and the source code page after every change to see what happens.
-
-</blockquote>
-
-
-
-### Step 2.14: Customize the language of the HTML tag
+### Step 2.15: Customize the language of the HTML tag
 
 This code gets added to the \<html> tag to let browsers and search engines know what language the page is written in.
 
@@ -573,8 +634,12 @@ This code gets added to the \<html> tag to let browsers and search engines know 
 
 #### To the HTML tag, like this:
 
+        <!-- START STEP 2.15 ADD HTML LANGUAGE ATTRIBUTES -->
+
         <html <?php language_attributes(); ?>>
 
+        <!-- END STEP 2.15 ADD HTML LANGUAGE ATTRIBUTES -->
+
 <blockquote>
 
 1. Open any page on your web site.
@@ -583,11 +648,13 @@ This code gets added to the \<html> tag to let browsers and search engines know 
 
 </blockquote>
     
-### Step 2.15: Customize the character set 
+### Step 2.16: Customize the character set 
 
-Add this line at the top of the \<head> tag on header.php, replacing the current \<meta charset="utf-8">:
-    
+Add this line **at the top** of the \<head> tag on header.php, replacing the current \<meta charset="utf-8">:
+
+    <!-- START STEP 2.16 ADD CHARACTER SET -->
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <!-- END STEP 2.16 ADD CHARACTER SET -->
 
 <blockquote>
 
@@ -597,7 +664,7 @@ Add this line at the top of the \<head> tag on header.php, replacing the current
 
 </blockquote>
 
-### Step 2.16: Add support for custom body classes      
+### Step 2.17: Add support for custom body classes      
 
 #### Add this:
 
@@ -605,8 +672,12 @@ Add this line at the top of the \<head> tag on header.php, replacing the current
 
  #### To the body tag, like this:   
 
+    <!-- START STEP 2.17 CUSTOMIZE BODY CLASS & OPEN -->
+
     <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
+
+    <!-- END STEP 2.17 CUSTOMIZE BODY CLASS & OPEN -->
 
 <blockquote>
 
@@ -614,13 +685,16 @@ Add this line at the top of the \<head> tag on header.php, replacing the current
 2. Also right-click the web page and select "View Page Source" to see the HTML. 
 3. Refresh the web page and the source code page after every change to see what happens.
 
-</blockquote>v
+</blockquote>
 
 
-### Step 2.17: Add the header branding areas
+### Step 2.18: Add the header branding areas
 
-On header.php add the following code. This will create our header, with logo and company name at the top of the page:
+On header.php use the following code to replace the starting \<header> tag. This will add branding elements to our header, with logo and company name at the top of the page.
+
+**Do not replace the search form, nav tag, menu or closing \<header> tag.**
     
+    <!-- START STEP 2.18 BRANDING & DESCRIPTION -->
     <header>
         <div class="branding">
             <a href="<?php echo esc_url(home_url()); ?>">
@@ -632,7 +706,7 @@ On header.php add the following code. This will create our header, with logo and
                 <?php bloginfo('description'); ?>
                 <?php // This is the WP site tagline, not the meta description tag ?>
         </div>
-    </header>
+    <!-- END STEP 2.18 BRANDING & DESCRIPTION -->
 
 <blockquote>
 
@@ -642,18 +716,16 @@ On header.php add the following code. This will create our header, with logo and
 
 </blockquote>
 
-### Step 2.18: Add the code for the search results
+### Step 2.19: Add the code for the search results
 
 Add the following code to search.php:
 
-        <?php 
+        <?php // START STEP 2.19 CREATE SEARCH RESULTS PAGE
             // Add this to all your php files for added security
-
             if (!defined('ABSPATH'))
                 exit;
-
             get_header(); ?>
-
+            <!-- START STEP CREATE SEARCH RESULTS PAGE -->
             <div class="flex-container">
             <main id="post-<?php the_ID(); ?>" <?php post_class(); ?>>    
             <?php
@@ -688,27 +760,30 @@ Add the following code to search.php:
 
             <?php get_footer(); ?>
 
+            <!-- END STEP 2.19 CREATE SEARCH RESULTS PAGE -->
+
 <blockquote>
 
-1. Open any page on your web site.
-2. Also right-click the web page and select "View Page Source" to see the HTML. 
-3. Refresh the web page and the source code page after every change to see what happens.
+1. Perform a search on your web site.
+2. The results are displayed using this new template.
 
 </blockquote>
 
 ## Customize the default page template
 
-### Step 2.19: Add the flex-container to index.php
+### Step 2.20: Add the flex-container to index.php
 
 Add the following div to your index.php before the \<main> tag:
 
+    <!-- START STEP 2.20 ADD FLEX CONTAINER -->
     <div class="flex-container">
 
 We do not want to add the H1 tag inside the flex container as the H1 would become the first column. We only want \<main> and the \<aside> the be columns with the flexbox.
 
-Add the closing tag for the flex-container **before the \<footer>**:
+Add the closing tag for the flex-container **after the \<main>**:
 
-        </div>
+    <!-- END STEP 2.20 ADD FLEX CONTAINER -->
+    </div>
 
 <blockquote>
 
@@ -720,13 +795,16 @@ Add the closing tag for the flex-container **before the \<footer>**:
 
 ## Customize the footer
 
-### Step 2.20: Add the following code to **footer.php**. 
+### Step 2.21: Add the following code to **footer.php**. 
+
+Add this code inside the \<footer> tag inside footer.php.
 
 This will add two menus:
 
 1. The default footer navigation menu.
 2. The social media icons menu for sending visitors to your different social media accounts. (Note: this is not a set of "share" buttons. It is just links to your profiles.)
 
+        <!-- START STEP 2.21 ADD FOOTER MENUS -->
         <nav>
             <?php wp_nav_menu( array( 
                 'theme_location' => 'footer-menu', 
@@ -743,6 +821,7 @@ This will add two menus:
 
 
         <p class="copyright">&copy; <?php echo bloginfo('name') ?>, <?php echo date("Y"); ?></p>
+        <!-- END STEP 2.21 ADD FOOTER MENUS -->
 
 
  <blockquote>
@@ -750,44 +829,43 @@ This will add two menus:
 1. Open any page on your web site.
 2. Also right-click the web page and select "View Page Source" to see the HTML. 
 3. Refresh the web page and the source code page after every change to see what happens.
-
+4. By default, you will see all the links on every menu.
+5. When you create the different menus in the backend, the menus will appear different.
 </blockquote>
 
- ### Step 2.21: Add the sidebar
+ ### Step 2.22: Add the sidebar
 
- Add the sidebar include call to index.php, before the flex-container's closing div tag.       
+ Add the sidebar include call **to index.php**, **before the flex-container's closing div** tag.       
         
-        
+        <!-- START STEP 2.22 ADD SIDEBAR -->
+
         <?php get_sidebar(); ?>
+
+        <!-- END STEP 2.22 ADD SIDEBAR -->
 
 <blockquote>
 
-1. Open any page on your web site.
-2. Also right-click the web page and select "View Page Source" to see the HTML. 
-3. Refresh the web page and the source code page after every change to see what happens.
+Nothing will change before you do the next steps.
 
 </blockquote>
 
-### Step 2.22: Add sidebar generating code
+### Step 2.23: Add sidebar generating code
 
 Add the following code to sidebar.php:
 
 
-        <?php 
-        // Add this to all your php files for added security
+        <?php // START BUILDING SIDEBAR
+            // Add this to all your php files for added security
 
-        if (!defined('ABSPATH'))
-            exit;
+            if (!defined('ABSPATH'))
+                exit;
 
-        if ( is_active_sidebar('widget_1')  ) : ?>
-                <aside class="widget-area" role="complementary">
-                <?php dynamic_sidebar( 'widget_1' ); ?>
-        </aside>
-        <?php endif; ?>
-
-
-
-    <?php endif; ?>  add_theme_support( 'custom-logo' );
+            if ( is_active_sidebar('widget_1')  ) : ?>
+                    <aside class="sidebar widget-area" role="complementary">
+                    <?php dynamic_sidebar( 'widget_1' ); ?>
+            </aside>
+            <?php endif; 
+        // END BUILDING SIDEBAR ?>
 
 
 <blockquote>
@@ -798,9 +876,9 @@ Add the following code to sidebar.php:
 
 </blockquote>
 
-### Step 2.23: Enable the sidebar in functions.php
+### Step 2.24: Enable the sidebar in functions.php
 
-        // ADDING WIDGET SUPPORT
+        // START STEP 2.24 ADDING WIDGET SUPPORT
 
         function billypoppins_widgets_init() {
 
@@ -815,12 +893,14 @@ Add the following code to sidebar.php:
 
         }
         add_action( 'widgets_init', 'billypoppins_widgets_init' );
+        // END STEP 2.24 ADDING WIDGET SUPPORT
 
 <blockquote>
 
 #### Note
 
-You must add at least one widget in Appearance > Widgets, otherwise the sidebar will not show up at all on the page.
+- "Widgets" will now appear in the WP sidebar menu. 
+- You must add at least one widget in Appearance > Widgets, otherwise the sidebar will not show up at all on the page.
 
 </blockquote>
 
@@ -833,11 +913,11 @@ You must add at least one widget in Appearance > Widgets, otherwise the sidebar 
 </blockquote>
 
 
-### Step 2.24: Enable the custom logo
+### Step 2.25: Enable the custom logo
 
 Add this code to header.php, immediately after \<header>, before \<div class="branding">:
 
-
+    <!-- START STEP 2.25 ADD CUSTOM LOGO -->
       <?php 
         // Enables Wordpress custom logo
         // See: https://developer.wordpress.org/reference%2Ffunctions%2Fadd_theme_support%2F/#custom-logo
@@ -846,15 +926,23 @@ Add this code to header.php, immediately after \<header>, before \<div class="br
             the_custom_logo();
             }
         ?>
+        <!-- END STEP 2.25 ADD CUSTOM LOGO -->
 
 <blockquote>
 
-1. Open any page on your web site.
-2. Also right-click the web page and select "View Page Source" to see the HTML. 
-3. Refresh the web page and the source code page after every change to see what happens.
+1. Open the admin page of your web site.
+2. Go to Appearance > Customize > Site Identity
+3. You can now choose a logo.
+
 
 </blockquote>
 
-### Step 2.25: Validate the Theme
+
+### Step 2.26: Read Me
+
+In the theme folder, add a readme.txt file. 
+You can add: "This theme is a school project." or something similar.
+
+### Step 2.27: Validate the Theme
 
 Use the **Theme Check** plugin to validate your theme.
