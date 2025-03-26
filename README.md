@@ -285,18 +285,12 @@ Go to Appearance > Themes and activate your theme
             exit; 
             // Exit if accessed directly. 
             // Ex: Not being called up directly by index.php or some other theme PHP file
-        ?>
-
-
-
-        <!--  START WORDPRESS GET_HEADER CONTENT  -->
-
-
+        ?><!--  START WORDPRESS GET_HEADER CONTENT IN INDEX.PHP -->
         <?php get_header(); ?>
         <?php // this function loads the header.php file ?>
 
 
-        <!--  END WORDPRESS GET_HEADER CONTENT  -->
+        <!--  END WORDPRESS GET_HEADER CONTENT IN INDEX.PHP -->
         <!-- STEP 2.4 ENDS HERE -->
 
 <blockquote>
