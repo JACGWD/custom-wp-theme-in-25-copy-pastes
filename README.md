@@ -258,21 +258,28 @@ Go to Appearance > Themes and activate your theme
 ### Step 2.3: Add the following code to footer.php
 
         <?php
-        // Add this to all your php files for added security
+    // Add this to all your php files for added security
 
-        if (!defined('ABSPATH'))
-            exit; 
-            // Exit if accessed directly. 
-            // Ex: Not being called up directly by index.php or some other theme PHP file
-        ?>
+    if (!defined('ABSPATH'))
+        exit; 
+        // Exit if accessed directly. 
+        // Ex: Not being called up directly by index.php or some other theme PHP file
+    ?>
 
-        <footer>
+    <footer>
+        <!-- START WP_FOOTER CONTENT -->
 
-        </footer>
+
+    <?php get_footer(); ?>
+    <?php // this functions loads the footer.php file ?>   
+    
+    
+        <!-- END WP_FOOTER CONTENT -->
+    </footer>
 
 
-        </body>
-        </html>
+    </body>
+    </html>
 
 <blockquote>
 
