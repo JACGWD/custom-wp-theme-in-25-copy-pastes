@@ -331,7 +331,7 @@ In the footer.php file, add  the following code **inside the \<footer> tag**:
 </blockquote>
 
 
-### Step 2.6: Add the Wordpress loop to the index.php file, and the footer include
+### Step 2.6: Add the Wordpress loop to the index.php file, before the footer include
 
 - After the code you pasted in **Step 2.4**, add the following code.
 - Make sure to **edit the text domain to match** the one you wrote in the CSS file.
@@ -354,9 +354,6 @@ In the footer.php file, add  the following code **inside the \<footer> tag**:
         </main>
 
         <!-- closing flex-container will go here -->
-
-        <?php wp_footer(); ?>
-        <?php // this function loads the footer.php file ?>
 
 <blockquote>
 
