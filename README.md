@@ -228,8 +228,12 @@ Go to Appearance > Themes and activate your theme
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <?php // the viewport metatag is what makes a design responsive ?>
 
+            <!-- START WP_HEAD CONTENT HERE  -->
+
             <?php wp_head(); ?>
             <?php // loads the WordPress head tag content ?>
+
+            <!-- END WP_HEAD CONTENT HERE  -->
             
             <title></title>
         </head>
