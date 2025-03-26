@@ -284,9 +284,11 @@ Go to Appearance > Themes and activate your theme
             // Ex: Not being called up directly by index.php or some other theme PHP file
         ?>
 
+        <?php get_header(); ?>
+        <?php // this calls up header.php ?>
 
         <?php wp_head(); ?>
-        <?php // this function loads the header.php file ?>
+        <?php // this function loads the WordPress head tag content ?>
 
 <blockquote>
 
