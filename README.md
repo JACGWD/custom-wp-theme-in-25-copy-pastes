@@ -55,6 +55,10 @@ Choose one of these options, and Save. View a page on the site, then go back and
 - Create an fonts folder
 - Create a style.css file
 
+### 1.6 Diagram of the files & folders structure
+
+(Do not copy/paste this part!)
+
         wp-content/themes/billy-poppins
         ├── footer.php
         ├── functions.php
