@@ -228,12 +228,8 @@ Go to Appearance > Themes and activate your theme
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <?php // the viewport metatag is what makes a design responsive ?>
 
-            <!-- START WP_HEAD CONTENT HERE  -->
-
             <?php wp_head(); ?>
             <?php // loads the WordPress head tag content ?>
-
-            <!-- END WP_HEAD CONTENT HERE  -->
             
             <title></title>
         </head>
@@ -291,8 +287,17 @@ Go to Appearance > Themes and activate your theme
             // Ex: Not being called up directly by index.php or some other theme PHP file
         ?>
 
-        <?php wp_head(); ?>
+
+
+        <!--  START WORDPRESS GET_HEADER CONTENT  -->
+
+
+        <?php get_header(); ?>
         <?php // this function loads the header.php file ?>
+
+
+        <!--  END WORDPRESS GET_HEADER CONTENT  -->
+        <!-- STEP 2.4 ENDS HERE -->
 
 <blockquote>
 
