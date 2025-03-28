@@ -352,7 +352,7 @@ Make sure to add this code **after** the \<footer> tag **but before** \<body>!
             <?php // this functions loads the footer content ?>   
     
     
-        <!-- END STEP 2.6 WP_FOOTER CONTENT -->
+        <!-- END STEP 2.7 WP_FOOTER CONTENT -->
 <blockquote>
 
 1. Open any page on your web site.
