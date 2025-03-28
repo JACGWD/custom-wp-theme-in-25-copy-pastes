@@ -577,7 +577,14 @@ Copy this block of code, and add it to **functions.php**:
             add_theme_support('title-tag');
             // Adds a custom <title> tag in the <head>
 
-            add_theme_support('custom-logo');
+            add_theme_support( 'custom-logo', array(
+                'height'               => 100,
+                'width'                => 400,
+                'flex-height'          => true,
+                'flex-width'           => true,
+                'header-text'          => array( 'site-title', 'site-description' ),
+                'unlink-homepage-logo' => false,
+                ) );
             // Adds a custom logo selector in Appearance > Customize > Site Identity
 
             add_theme_support( "responsive-embeds" );
@@ -952,3 +959,5 @@ You can add: "This theme is a school project." or something similar.
 ### Step 2.27: Validate the Theme
 
 Use the **Theme Check** plugin to validate your theme.
+
+Note that the checker will output multiple warnings and recommendations. However you do not want to see any errors in this exercise.
