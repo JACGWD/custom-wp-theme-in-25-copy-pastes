@@ -468,9 +468,9 @@ This is where you can add the number of menus you want to have in your WordPress
         function add_my_menus() {
             register_nav_menus(
             array(
-                'header-menu' => __( 'Header Menu' ),
-                'footer-menu' => __( 'Footer Menu' ),
-                'social-menu' => __( 'Social Menu' ),
+                'header-menu' => __( 'Header Menu', 'billy-poppins' ),
+                'footer-menu' => __( 'Footer Menu', 'billy-poppins' ),
+                'social-menu' => __( 'Social Menu', 'billy-poppins'),
                 // YOU CAN ADD AS MANY MENUS AS YOU WANT HERE
             )
             );
@@ -478,7 +478,6 @@ This is where you can add the number of menus you want to have in your WordPress
         add_action( 'init', 'add_my_menus' );
 
         // END STEP 2.10 ADD THE MENUS
-
 
 
 <blockquote>
