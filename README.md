@@ -571,18 +571,13 @@ Copy this block of code, and add it to **functions.php**:
             add_theme_support('post-thumbnails');
             // Enable featured images and post thumbnails
 
-             add_theme_support( 'automatic-feed-links' );
+            add_theme_support( 'automatic-feed-links' );
             
             add_theme_support('title-tag');
             // Adds a custom <title> tag in the <head>
 
             add_theme_support('custom-logo');
             // Adds a custom logo selector in Appearance > Customize > Site Identity
-
-            add_theme_support( 'block-templates' );
-            // Adds a support for block templates
-
-            add_theme_support( "wp-block-styles" );
 
             add_theme_support( "responsive-embeds" );
 
