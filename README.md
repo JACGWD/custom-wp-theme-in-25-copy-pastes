@@ -51,7 +51,7 @@ Choose one of these options, and Save. View a page on the site, then go back and
 - Create a functions.php file
 - Create a sidebar.php file
 - Create a index.php file
-- Create an img folder for your style images (not content images - those are uploaded via the Wordpress interface and saved automatically into the wp-content/uploads folder)
+- Create an img folder for your **css background images** (not content images - those are uploaded via the Wordpress interface and saved automatically into the wp-content/uploads folder)
 - Create an fonts folder
 - Create a js folder (for javascripts)
 - Create a style.css file
@@ -66,6 +66,7 @@ Choose one of these options, and Save. View a page on the site, then go back and
         ├── header.php
         ├── img/
         ├── fonts/
+        ├── js/
         ├── index.php
         ├── style.css
         ├── search.php
