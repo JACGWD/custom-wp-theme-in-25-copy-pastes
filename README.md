@@ -117,7 +117,7 @@ Although it is just a comment, WordPress depends on this information to make the
         Version: 1.0
         License: GNU General Public License v2 or later
         License URI: http://www.gnu.org/licenses/gpl-2.0.html 
-        Tested up to: 6.7.2
+        Tested up to: 6.7
         Requires PHP: 7
         Text Domain: billy-poppins
 
@@ -960,4 +960,4 @@ You can add: "This theme is a school project." or something similar.
 
 Use the **Theme Check** plugin to validate your theme.
 
-Note that the checker will output multiple warnings and recommendations. However you do not want to see any errors in this exercise.
+Note that the checker will output multiple warnings and recommendations. **However you do not want to see any errors in this exercise.**
