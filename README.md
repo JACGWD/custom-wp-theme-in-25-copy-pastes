@@ -572,6 +572,7 @@ Copy this block of code, and add it to **functions.php**:
             // Enable featured images and post thumbnails
 
             add_theme_support( 'automatic-feed-links' );
+            This feature adds RSS feed links to HTML <head>.
             
             add_theme_support('title-tag');
             // Adds a custom <title> tag in the <head>
@@ -580,8 +581,10 @@ Copy this block of code, and add it to **functions.php**:
             // Adds a custom logo selector in Appearance > Customize > Site Identity
 
             add_theme_support( "responsive-embeds" );
+            // The embed blocks automatically apply styles to embedded content to reflect the aspect ratio of content that is embedded in an iFrame.
 
             add_theme_support( "align-wide" );
+            // Some blocks such as the image block have the possibility to define a “wide” or “full” alignment
             
             add_theme_support('html5',
             array(
