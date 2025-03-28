@@ -579,6 +579,9 @@ Copy this block of code, and add it to **functions.php**:
 
             add_theme_support('custom-logo');
             // Adds a custom logo selector in Appearance > Customize > Site Identity
+
+            add_theme_support('block-templates');
+            // Adds a support for block themes
             
             add_theme_support('html5',
             array(
