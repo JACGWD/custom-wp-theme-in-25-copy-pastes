@@ -573,7 +573,7 @@ Copy this block of code, and add it to **functions.php**:
             // Enable featured images and post thumbnails
 
             add_theme_support( 'automatic-feed-links' );
-            This feature adds RSS feed links to HTML <head>.
+            // This feature adds RSS feed links to HTML <head>.
             
             add_theme_support('title-tag');
             // Adds a custom <title> tag in the <head>
