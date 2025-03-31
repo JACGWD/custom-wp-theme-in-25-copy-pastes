@@ -344,7 +344,7 @@ Make sure to add this code at the bottom of index.php!
 
 ### Step 2.7: Add the following code inside footer.php 
 
-Make sure to add this code **after** the \<footer> tag **but before** \<body>!
+Make sure to add this code **after** the \</footer> tag **but before** \</body>!
 
         <!-- START STEP 2.7 WP_FOOTER CONTENT -->
 
