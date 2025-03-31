@@ -92,7 +92,7 @@ Choose one of these options, and Save. View a page on the site, then go back and
 - **Add your name** as a layer on top
 - Save the file as a PNG file inside your theme folder.
 - The file must be called "screenshot.png".
-- To minimize the file size, avoid photographs and use flat colors. (The theme checke4r will complain about heavy file sizes.)
+- To minimize the file size, avoid photographs and use flat colors. (The theme checker will complain about heavy file sizes.)
 - After creating the file, run it through [ImageOptim](https://imageoptim.com/mac) to optimize it and reduce the file size.
   
 
