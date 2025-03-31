@@ -38,7 +38,7 @@ Choose one of these options, and Save. View a page on the site, then go back and
 
 
 ### 1.4 Create a theme folder in wp-content
-- Navigate to /htdocs/wp-content/themes/ and create a new folder called "your-name". 
+- Navigate to /wp-content/themes/ and create a new folder called "your-name". 
 - Ex: "billy-poppins". 
 - Make sure to give it a name **without spaces or capitalized letters**.
 
