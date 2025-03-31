@@ -38,8 +38,9 @@ Choose one of these options, and Save. View a page on the site, then go back and
 
 
 ### 1.4 Create a theme folder in wp-content
-- Navigate to /wp-content/themes/ and create a new folder called "your-name". 
-- Ex: "billy-poppins". 
+- Create (or open) a new folder called "your-name" in /wp-content/themes/. Ex: "billy-poppins". 
+  - This folder needs to be inside a working WordPress installation (in Wordpress Studio, MAMP or Bitnami).
+  - This is the folder you previously synced/will be syncing with GitHub.
 - Make sure to give it a name **without spaces or capitalized letters**.
 
 
