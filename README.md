@@ -393,7 +393,7 @@ Make sure to add this code **after** the \<footer> tag **but before** \<body>!
             endif;
             ?>
 
-            <?php wp_link_pages( $args ); ?>
+            <?php wp_link_pages(); ?>
 
         <!-- END WORDPRESS LOOP -->    
         </main>
