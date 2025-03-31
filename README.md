@@ -893,6 +893,9 @@ Add the following code to sidebar.php:
 
 ### Step 2.24: Enable the sidebar in functions.php
 
+Add the following code to functions.php:
+
+
         // START STEP 2.24 ADDING WIDGET SUPPORT
 
         function billypoppins_widgets_init() {
@@ -960,6 +963,7 @@ You can add: "This theme is a school project." or something similar.
 
 ### Step 2.27: Validate the Theme
 
-Use the **Theme Check** plugin to validate your theme.
+- Use the **Theme Check** plugin to validate your theme.
+- You will find it in Appearance > Theme Check
 
-Note that the checker will output multiple warnings and recommendations. **However you do not want to see any errors in this exercise.**
+Note that the checker will output multiple warnings and recommendations. These are acceptable for this exercise. **However you do not want to see any errors (written in red) in the theme checker's report.**
