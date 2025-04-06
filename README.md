@@ -1020,3 +1020,110 @@ This is why the exercise requires that you look at the refreshed  HTML code afte
 - You will find it in Appearance > Theme Check
 
 Note that the checker will output multiple warnings and recommendations. These are acceptable for this exercise. **However you do not want to see any errors (written in red) in the theme checker's report.**
+
+
+## Simplified Final HTML
+
+Compare your HTML against this template to make sure your code is written in the same order. Note that dynamically added content such as menus and sidebar content will likely differ. 
+
+
+        <!DOCTYPE html>
+        <html lang="en-US">
+
+        <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <title>Portfolio &#8211; Billy Poppins MTL Designer</title>
+                <!-- only ONE title tag -->
+
+                <link rel='stylesheet' id='reset-meyer_21-css'href='simple-css-reset-v2.2.css?ver=6.7.2' type='text/css' media='all' />
+                <link rel='stylesheet' id='billypoppins-css'  href='style.css?ver=6.7.2' type='text/css' media='all' />
+        </head>
+
+        <body class="home blog wp-custom-logo wp-embed-responsive">
+
+
+        <header>
+
+                <a href="http://localhost:8881/" class="custom-logo-link" rel="home" aria-current="page">
+                    <img width="499" height="512" src="logo.png" />
+                </a>
+                
+                
+                <div class="branding">
+                        <a href="http://localhost:8881">
+                                Portfolio 
+                        </a>
+                </div>
+
+                <div class="description">
+                        Billy Poppins MTL Designer
+                </div>
+
+
+                <form role="search" method="get" class="search-form" action="http://localhost:8881/">
+                        <label>
+                                <span class="screen-reader-text">Search for:</span>
+                                <input type="search" class="search-field" placeholder="Search &hellip;" value=""
+                                        name="s" />
+                        </label>
+                        <input type="submit" class="search-submit" value="Search" />
+                </form>
+                
+                
+                <nav>
+                        <div id="menu" class="primary-menu">
+                                <ul>
+                                        <!-- primary menu goes here if you created it -->
+                                </ul>
+                        </div>
+
+                </nav>
+
+        </header>
+
+        <div class="flex-container">
+
+                <main id="post-6743" class="post">
+
+                        <h1>Page Title Goes Here</h1>
+
+                </main>
+
+
+
+                <aside class="sidebar widget-area" role="complementary">
+                        <section>
+                             <!-- sidebar content goes here -->
+                        </section>
+                </aside>
+
+        </div>
+
+
+
+        <footer>
+                <nav>
+                        <div class="menu">
+                                <!-- footer menu goes here if you created it -->
+                        </div>
+                </nav>
+
+                <nav>
+                        <div class="menu">
+                                <ul>
+                                    <!-- footer social menu goes here if you created it -->
+                                </ul>
+                        </div>
+                </nav>
+
+
+                <p class="copyright">&copy; Portfolio, 2025</p>
+        </footer>
+
+        </body>
+
+        </html>   
+    
+    
