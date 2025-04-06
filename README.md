@@ -100,6 +100,28 @@ Choose one of these options, and Save. View a page on the site, then go back and
 
 ## 2. Building a WordPress Theme in 25 Steps
 
+<blockquote>
+
+#### Important
+
+The main challenge for students in this exercise is pasting the code in the correct order within each file, particularly index.php. By default, new steps are just pasted at the bottom of the file. Ultimately, the HTML has to properly written. Elements that must be inside the \<head> must be displayed within that tag. The document starts with \<!doctype html> and ends with \</body> and \</html>. 
+
+This is why the exercise requires that you look at the refreshed  HTML code after every step. You are building a very simple HTML page (just ignore the large blocks of javascript). Pay attention to this HTML order:
+
+1. !doctype
+2. html
+3. head
+4. body
+5. header
+6. open .flex-container
+7. main
+8. aside
+9. close .flex-container
+10. footer
+11. close body and html
+
+</blockquote>
+
 ### Step 2.1: Add the comment block to the style.css file
 
 Although it is just a comment, WordPress depends on this information to make the whole system work. 
@@ -961,7 +983,38 @@ Add this code to header.php, immediately after \<header>, before \<div class="br
 In the theme folder, add a readme.txt file. 
 You can add: "This theme is a school project." or something similar.
 
-### Step 2.27: Validate the Theme
+### Step 2.27: Proof the HTML structure
+
+<blockquote>
+
+#### Reminder
+
+The main challenge for students in this exercise is pasting the code in the correct order within each file, particularly index.php. By default, new steps are just pasted at the bottom of the file. Ultimately, the HTML has to properly written. Elements that must be inside the \<head> must be displayed within that tag. The document starts with \<!doctype html> and ends with \</body> and \</html>. 
+
+This is why the exercise requires that you look at the refreshed  HTML code after every step. You are building a very simple HTML page (just ignore the large blocks of javascript). Pay attention to this HTML order:
+
+1. !doctype
+2. html
+3. head
+4. body
+5. header
+6. open .flex-container
+7. main
+8. aside
+9. close .flex-container
+10. footer
+11. close body and html
+
+</blockquote>
+
+1. Open the web site in **Firefox**
+2. Right-click the page, and select "View Page Source"
+3. This will open a tab, and display the HTML source code of the page
+4. Firefox automatically highlights bad HTML in red
+5. Fix any errors you find
+
+
+### Step 2.28: Validate the Theme
 
 - Use the **Theme Check** plugin to validate your theme.
 - You will find it in Appearance > Theme Check
